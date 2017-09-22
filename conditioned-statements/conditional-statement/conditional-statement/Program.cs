@@ -7,32 +7,47 @@ namespace conditional_statement
         static void Main(string[] args)
         {
             Console.WriteLine("Ohjelma tulostaa positiivinen, negatiivinen tai nolla.");
-            Console.Write("Syötä luku: ");
-            string userInput;
-            userInput= Console.ReadLine();
-
-           // int evaluatedNumber;
-            int.TryParse(userInput, out int evaluatedNumber);
-
-            if (evaluatedNumber < 0)
+            bool isNumber;
+            do
             {
-                Console.WriteLine($"Numero {evaluatedNumber} on negatiivinen.");
-                //  Console.WriteLine($"Syötit arvon {userInput}") ;
-                Console.ReadKey();
-            }
-            else if (evaluatedNumber < 0)
-            {
-                Console.WriteLine($"Numero {evaluatedNumber} on positiivinen.");
-                //  Console.WriteLine($"Syötit arvon {userInput}") ;
-                Console.ReadKey();
-            }
+                Console.Write("Syötä luku: ");
+                string userInput;
+                userInput = Console.ReadLine();
 
-            else ()
-            {
-                Console.WriteLine($"Numero {evaluatedNumber} on 0.");
-                //  Console.WriteLine($"Syötit arvon {userInput}") ;
-                Console.ReadKey();
-            }
+                // int evaluatedNumber;
+                isNumber = int.TryParse(userInput, out int evaluatedNumber);
+
+                if (isNumber == true)
+                {
+
+                    if (evaluatedNumber < 0)
+                    {
+                        Console.WriteLine($"Numero {evaluatedNumber} on negatiivinen.");
+                        //  Console.WriteLine($"Syötit arvon {userInput}") ;
+
+                    }
+                    else if (evaluatedNumber > 0)
+                    {
+                        Console.WriteLine($"Numero {evaluatedNumber} on positiivinen.");
+                        //  Console.WriteLine($"Syötit arvon {userInput}") ;
+
+                    }
+
+                    else
+                    {
+                        Console.WriteLine($"Numero on 0.");
+                        //  Console.WriteLine($"Syötit arvon {userInput}") ;
+
+                    }
+                }
+
+                else
+                {
+                    Console.WriteLine("Oletko hieman yksinkertainen? Et syöttänyt lukua.");
+
+                }
+            } while (isNumber == false);
+            Console.ReadKey();
         }
     }
 }
