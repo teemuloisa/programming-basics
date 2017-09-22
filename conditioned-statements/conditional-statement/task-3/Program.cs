@@ -8,7 +8,7 @@ namespace conditional_statement
         {
             Console.OutputEncoding = System.Text.Encoding.UTF8;
 
-            Console.WriteLine("Ohjelma tulostaa positiivinen, negatiivinen tai nolla.");
+            Console.WriteLine("Ohjelma tulostaa onko luku positiivinen, negatiivinen tai nolla sekä onko se parillinen tai pariton.");
             bool isNumber;
             do
             {

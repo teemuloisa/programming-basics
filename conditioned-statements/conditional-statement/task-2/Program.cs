@@ -6,7 +6,7 @@ namespace task_2
     {
         static void Main(string[] args)
         {
-            Console.OutputEncoding = System.Text.Encoding.UTF8;
+            Console.OutputEncoding=System.Text.Encoding.UTF8;
 
             Console.WriteLine("Ohjelma tulostaa parillinen tai pariton.");
             bool isNumber;
