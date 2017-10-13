@@ -6,14 +6,15 @@ namespace loop_3
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Ohjelma laskee kertoma. Anna luku, jonka kertoma lasketaan.");
+            Console.OutputEncoding = System.Text.Encoding.UTF8;
+            Console.Write("Ohjelma laskee parillisten ja parittomien summan. Anna luku: ");
             string userInput = Console.ReadLine();
             int number = int.Parse(userInput);
             //int.TryParse(userInput, out int number);
             int i = 0;
-            int f = 0;
-            int x = 0;
-            int y = 0;
+
+            int evenSum = 0; //Parilliset
+            int oddSum = 0; //Parittomat
 
             if (number < 0)
             {
@@ -21,39 +22,20 @@ namespace loop_3
                 Console.ReadKey();
             }
 
-            else if (number % 2 == 0 )
+            else 
             {
-
-
-
                 do
                 {
-                    //  Console.WriteLine(i);
+                    if (i % 2 == 0)
+                        evenSum = evenSum + i;
+                    else
+                        oddSum = oddSum + i;
                     i = i + 1;
-
-                    f = f + i;
-                    //Console.WriteLine($"{i}!={f}");
-
-                } while (i < number);
-
-                do
-                {
-                    //  Console.WriteLine(i);
-                    x = x + 1;
-
-                    y = y + x;
-                    //Console.WriteLine($"{i}!={f}");
-
-                } while (x < number);
-
-                Console.WriteLine($"Syötit{i}\n parillinen{f} pariton{y}");
+                } while (i <= number);
+                Console.WriteLine($"Parillisten summa: {evenSum}\nParittomien summa: {oddSum}");
 
                 Console.ReadKey();
-
             }
-
-
-
         }
     }
 }
