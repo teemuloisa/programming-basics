@@ -75,7 +75,7 @@ namespace task_4
 
                     else
                     {
-                        Console.WriteLine($"{Z}, {Y}, {X}");
+                        Console.WriteLine($"{Y}, {Z}, {X}");
 
 
                     }
