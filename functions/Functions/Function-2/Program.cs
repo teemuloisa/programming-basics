@@ -26,9 +26,10 @@ namespace Function_2
             {
 
                 string res = string.Empty;
-                res = ($"Luku {y} on suurempi kuin luku {n}");
+                res = ($"Luku {y} on yhtä suuri kuin {n}");
                 return res;
             }
+
             else
             {
              
@@ -46,7 +47,6 @@ namespace Function_2
 
             Console.WriteLine("Functions - Task 2. \n");
             Console.WriteLine("Syötä kaksi lukua.");
-
             int n;
             int y;
 
