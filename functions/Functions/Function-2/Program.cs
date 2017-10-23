@@ -4,7 +4,7 @@ namespace Function_2
 {
     class Program
     {
-        static string Minimi(int n, int y)
+        static string minimi(int n, int y)
         {       
             if (n > y)
             {
@@ -60,7 +60,7 @@ namespace Function_2
 
 
 
-            string vertailu = Minimi(n, y);
+            string vertailu = minimi(n, y);
             Console.WriteLine(vertailu);
             Console.ReadKey();
 
